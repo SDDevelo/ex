@@ -59,7 +59,7 @@ function parseSize(s){const m=s.trim().toUpperCase().replace(/\s+/g,'').match(/^
 function yearCoef(y){if(y<=2015)return 0.8;if(y<=2017)return 0.88;if(y<=2019)return 0.95;if(y<=2021)return 1;if(y<=2023)return 1.05;return 1.1;}
 function treadCoef(mm){return 1+Math.min((mm-5)*0.1,0.3);}
 function popAuto(n){for(let k in POP){if(POP[k].has(n))return k;}return"very";}
-function round50(x){return Math.round(x/50)*50;}
+function round25(x){return Math.round(x/25)*25;}
 function clamp(x,a,b){return Math.max(a,Math.min(b,x));}
 function fmt(x){return x.toLocaleString("uk-UA");}
 document.getElementById("calc").onclick=()=>{
